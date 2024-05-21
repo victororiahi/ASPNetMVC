@@ -1,0 +1,37 @@
+﻿@model List<ASPNetMVC.Web.Entities.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Product Index</h2>
+
+<table class="table table-bordered">
+    @foreach (var prod in Model)
+    {
+        <tr>
+            <td>
+                @prod.Name
+            </td>
+            <td>
+                @prod.Description
+            </td>
+            <td>
+                @prod.UnitPrice
+            </td>
+            <td>
+                @prod.Color
+            </td>
+            <td>
+                @prod.Quantity
+            </td>
+        </tr>
+    }
+
+</table>
+
+<a class="btn btn-success" href="/Product/AddProduct">Add Product</a>
+       
+
+
+
